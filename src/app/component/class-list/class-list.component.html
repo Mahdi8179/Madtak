@@ -1,0 +1,11 @@
+<div *ngFor="let item of classData" class="class-card">
+    <h3>{{ item.name }}</h3>
+    <p>Classroom: {{ item.classroom_str }}</p>
+    <p>Duration: {{ item.duration }} minutes</p>
+    <p>Run Plans:</p>
+    <ul>
+      <li *ngFor="let plan of item.run_plans">
+        From {{ plan.start_time }} to {{ plan.end_time }} on day {{ plan.day }}
+      </li>
+    </ul>
+</div>
